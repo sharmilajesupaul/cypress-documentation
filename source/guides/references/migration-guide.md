@@ -224,6 +224,8 @@ on('before:browser:launch', (browser, args) => {
   // will print a deprecation warning telling you
   // to change your code to the new signature
   args.push('--another-arg')
+
+  return args
 })
 ```
 
@@ -232,6 +234,8 @@ on('before:browser:launch', (browser, args) => {
 ```js
 on('before:browser:launch', (browser, launchOptions) => {
   launchOptions.args.push('--another-arg')
+
+  return launchOptions
 })
 ```
 
